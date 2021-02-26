@@ -1,0 +1,39 @@
+<header>
+  <nav>
+    <%= image_tag("logo.png") %>
+    <ul class="left">
+      <li>
+        <%= nav_link_to 'Released', movies_path %>
+      </li>
+      <li>
+        <%= nav_link_to 'Upcoming', filtered_movies_path(:upcoming) %>
+      </li>
+      <li>
+        <%= nav_link_to 'Recent', filtered_movies_path(:recent) %>
+      </li>
+      <li>
+        <%= nav_link_to 'Hits', filtered_movies_path(:hits) %>
+      </li>
+      <li>
+        <%= nav_link_to 'Flops', filtered_movies_path(:flops) %>
+      </li>
+    </ul>
+    <ul class="right">
+      <% if current_user %>
+        <li>
+          <%= link_to current_user.name, current_user %>
+        </li>
+        <li>
+          <%= link_to "Sign Out", session_path, method: :delete, class: 'button' %>
+        </li>
+      <% else %>
+        <li>
+          <%= link_to "Sign In", signin_path, class: 'button' %>
+        </li>
+        <li>
+          <%= link_to "Sign Up", signup_path, class: 'button' %>
+        </li>
+      <% end %>
+    </ul>
+  </nav>
+</header>
