@@ -44,7 +44,7 @@ Movie.create!([
                   total_gross: 1_346_913_161,
                   director: 'Ryan Coogler',
                   duration: '134 min'
-                }
+                },
                 {
                   title: 'Avengers: Infinity War',
                   description:
@@ -160,7 +160,8 @@ Movie.create!([
                   total_gross: 821_847_012,
                   director: 'Patty Jenkins',
                   duration: '141 min'
-    ])
+                }
+              ])
 
 [
   ['Avengers: Endgame', 'avengers-end-game.png'],
