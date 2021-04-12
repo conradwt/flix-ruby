@@ -1,11 +1,11 @@
 module MoviesHelper
+  def average_stars_as_percent
+    average_stars(self)
+  end
+
   def average_stars(movie)
     average = movie.average_stars
     average.zero? ? 'No reviews' : number_with_precision(average, precision: 1)
-  end
-
-  def average_stars_as_percent
-    average_stars(self)
   end
 
   def description(movie)
