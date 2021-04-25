@@ -10,7 +10,7 @@ class SessionsController < ApplicationController
       redirect_to (session[:intended_url] || user), notice: "Welcome back, #{user.name}!"
       session[:intended_url] = nil
     else
-      flash.now[:alert] = 'Invalid emial/password combination!'
+      flash.now[:alert] = 'Invalid email/password combination!'
       render :new
     end
   end
