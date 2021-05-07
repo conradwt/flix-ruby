@@ -16,10 +16,12 @@
         <%= review.comment %>
       </p>
 
-      <div class="admin">
-        <%= link_to 'Edit', edit_movie_review_path(@movie, review) %>
-        <%= link_to 'Delete', [@movie, review], method: :delete, data: { confirm: 'Are you sure?' }%>
-      </div>
+      <% if current_user?(review.user) || current_user_admin? %>
+        <div class="admin">
+          <%= link_to 'Edit', edit_movie_review_path(@movie, review) %>
+          <%= link_to 'Delete', [@movie, review], method: :delete, data: { confirm: 'Are you sure?' }%>
+        </div>
+      <% end %>
     </li>
   <% end %>
 </ul>
