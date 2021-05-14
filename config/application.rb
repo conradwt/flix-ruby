@@ -1,6 +1,6 @@
-require_relative "boot"
+require_relative 'boot'
 
-require "rails/all"
+require 'rails/all'
 
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
@@ -18,5 +18,22 @@ module Flix
     #
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
+
+    # configure file generation for both application and specifications.
+    config.generators do |g|
+      g.helper false
+      g.orm             :active_record
+      g.template_engine :erb
+      g.test_framework  :rspec,
+                        controller_specs: false,
+                        fixture: false,
+                        helper_specs: false,
+                        routing_specs: false,
+                        view_specs: false
+      g.fixture_replacement :factory_bot
+      g.fallbacks[:rspec] = :test_unit
+      g.stylesheets     false
+      g.javascripts     false
+    end
   end
 end
