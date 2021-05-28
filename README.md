@@ -6,7 +6,7 @@ The purpose of this project is to implement an application where fans can commen
 
 ## Software requirements
 
-- Node 14.16.0 or newer
+- Node 14.17.0 or newer
 
 - PostgreSQL 13.2 or newer
 
@@ -14,7 +14,7 @@ The purpose of this project is to implement an application where fans can commen
 
 - Ruby 3.0.1 or newer
 
-Note: This tutorial was updated on macOS 11.3.1.
+Note: This tutorial was updated on macOS 11.4.
 
 ## Communication
 
