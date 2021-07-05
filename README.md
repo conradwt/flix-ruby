@@ -6,9 +6,9 @@ The purpose of this project is to implement an application where fans can commen
 
 ## Software requirements
 
-- Node 14.17.0 or newer
+- Node 14.17.2 or newer
 
-- PostgreSQL 13.2 or newer
+- PostgreSQL 13.3 or newer
 
 - Rails 6.1.3.1 or newer
 
