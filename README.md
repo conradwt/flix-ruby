@@ -10,9 +10,9 @@ The purpose of this project is to implement an application where fans can commen
 
 - PostgreSQL 13.3 or newer
 
-- Rails 6.1.3.1 or newer
+- Rails 6.1.4 or newer
 
-- Ruby 3.0.1 or newer
+- Ruby 3.0.2 or newer
 
 Note: This tutorial was updated on macOS 11.4.
 
