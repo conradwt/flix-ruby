@@ -4,16 +4,9 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '3.0.2'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 6.1', '>= 6.1.4'
+gem 'rails', '~> 6.1.4', '>= 6.1.4.1'
 
-group :development, :test do
-  # Use sqlite3 as the database for Active Record
-  gem 'sqlite3', '~> 1.4'
-end
-
-group :production do
-  gem 'pg', '~> 1.2', '>= 1.2.3'
-end
+gem 'pg', '~> 1.2', '>= 1.2.3'
 
 # Use Puma as the app server
 gem 'puma', '~> 5.0'
@@ -41,7 +34,7 @@ gem 'bootsnap', '>= 1.4.4', require: false
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'byebug', platforms: %i[mri mingw x64_mingw]
+  # gem 'byebug', platforms: %i[mri mingw x64_mingw]
   gem 'factory_bot_rails', '~> 6.2'
   gem 'rexml', '~> 3.2', '>= 3.2.5'
   gem 'rspec-rails', '~> 5.0', '>= 5.0.1'
