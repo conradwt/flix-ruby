@@ -14,7 +14,7 @@ The purpose of this project is to implement an application where fans can commen
 
 - Ruby 3.0.2 or newer
 
-Note: This tutorial was updated on macOS 11.6.1
+Note: This tutorial was updated on macOS 11.6.1.
 
 ## Communication
 
@@ -28,37 +28,37 @@ Note: This tutorial was updated on macOS 11.6.1
 
 1.  clone this repository
 
-    ```bash
+    ```zsh
     git clone git@github.com:conradwt/flix.git
     ```
 
 2.  change directory location
 
-    ```bash
+    ```zsh
     cd flix
     ```
 
 3.  install dependencies
 
-    ```bash
+    ```zsh
     bundle install
     ```
 
 4.  create, migrate, and seed the database
 
-    ```bash
+    ```zsh
     rails db:setup
     ```
 
 5.  start the server
 
-    ```bash
+    ```zsh
     rails s
     ```
 
 6.  navigate to our application within the browser
 
-    ```bash
+    ```zsh
     open http://localhost:3000
     ```
 
