@@ -6,15 +6,15 @@ The purpose of this project is to implement an application where fans can commen
 
 ## Software requirements
 
-- Node 14.18.1 or newer
+- Node 14.18.2 or newer
 
-- PostgreSQL 14.0 or newer
+- PostgreSQL 14.1 or newer
 
 - Rails 6.1.4.1 or newer
 
-- Ruby 3.0.2 or newer
+- Ruby 3.1.0 or newer
 
-Note: This tutorial was updated on macOS 11.6.1.
+Note: This tutorial was updated on macOS 11.6.2.
 
 ## Communication
 

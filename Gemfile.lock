@@ -136,7 +136,7 @@ GEM
     minitest (5.14.4)
     msgpack (1.4.2)
     nio4r (2.5.8)
-    nokogiri (1.12.5-x86_64-darwin)
+    nokogiri (1.13.0-x86_64-darwin)
       racc (~> 1.4)
     pg (1.2.3)
     popper_js (1.16.0)
@@ -283,7 +283,7 @@ DEPENDENCIES
   webpacker (~> 5.0)
 
 RUBY VERSION
-   ruby 3.0.2p107
+   ruby 3.1.0p0
 
 BUNDLED WITH
-   2.2.22
+   2.3.3
