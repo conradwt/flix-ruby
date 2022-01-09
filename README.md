@@ -29,13 +29,13 @@ Note: This tutorial was updated on macOS 11.6.2.
 1.  clone this repository
 
     ```zsh
-    git clone git@github.com:conradwt/flix.git
+    git clone git@github.com:conradwt/flix-ruby.git
     ```
 
 2.  change directory location
 
     ```zsh
-    cd flix
+    cd flix-ruby
     ```
 
 3.  install dependencies
