@@ -94,4 +94,4 @@ Flix is released under the [MIT license](./LICENSE.md).
 
 ## Copyright
 
-copyright:: (c) Copyright 2021 Conrad Taylor. All Rights Reserved.
+copyright:: (c) Copyright 2021 - 2022 Conrad Taylor. All Rights Reserved.
