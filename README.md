@@ -6,7 +6,7 @@ The purpose of this project is to implement an application where fans can commen
 
 ## Software requirements
 
-- Node 14.18.2 or newer
+- Node 14.18.3 or newer
 
 - PostgreSQL 14.1 or newer
 
