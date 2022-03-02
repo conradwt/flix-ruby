@@ -6,6 +6,77 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+# clear database
+
+Movie.delete_all
+Genre.delete_all
+User.delete_all
+
+# create users
+
+user_data = [
+  {
+    name: 'Conrad Taylor',
+    username: 'conradwt',
+    email: 'conradwt@example.com',
+    admin: true
+  },
+  {
+    name: 'Chief',
+    username: 'chief',
+    email: 'chief@example',
+    password: '1qaz2wsx3edc',
+    admin: true
+  },
+  { name: 'Cyborg',
+    username: 'cyborg',
+    email: 'cyborg@example.com',
+    admin: true },
+  {
+    name: 'Crazy Jane',
+    username: 'jane',
+    email: 'jane@example.com',
+    admin: true
+  },
+  {
+    name: 'Larry Trainor',
+    username: 'larryt',
+    email: 'larryt@example.com',
+    admin: true
+  },
+  { name: 'Rita Farr',
+    username: 'ritaf',
+    email: 'ritaf@example.com',
+    admin: true },
+  {
+    name: 'Cliff Steele',
+    username: 'cliffs',
+    email: 'cliffs@example.com',
+    admin: true
+  },
+  { name: 'Negative Man',
+    username: 'negativem',
+    email: 'negativem@example.com',
+    admin: true }
+]
+
+user_data.each do |user_hash|
+  user = User.new(user_hash)
+  user.password = '1qaz2wsx3edc'
+  user.password_confirmation = '1qaz2wsx3edc'
+  user.save
+end
+
+# create genres
+
+genre_names = %w[Action Adventure Comedy Drama Sci-Fi]
+
+genre_names.each do |genre_name|
+  Genre.create!(name: genre_name)
+end
+
+# create movies
+
 Movie.create!([
                 {
                   title: 'Avengers: Endgame',
