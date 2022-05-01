@@ -36,8 +36,9 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   # gem 'byebug', platforms: %i[mri mingw x64_mingw]
   gem 'factory_bot_rails', '~> 6.2'
+
   gem 'rexml', '~> 3.2', '>= 3.2.5'
-  gem 'rspec-rails', '~> 5.0', '>= 5.0.1'
+  gem 'rspec-rails', '~> 5.1', '>= 5.1.2'
 end
 
 group :development do
@@ -53,7 +54,7 @@ end
 
 group :test do
   # Adds support for Capybara system testing and selenium driver
-  gem 'capybara', '~> 3.35', '>= 3.35.3'
+  gem 'capybara', '~> 3.36.0'
   gem 'selenium-webdriver'
   # Easy installation and use of web drivers to run system tests with browsers
   gem 'webdrivers'
