@@ -204,7 +204,6 @@ GEM
       thor (~> 1.0)
       zeitwerk (~> 2.5)
     rake (13.0.6)
-    redis (4.6.0)
     regexp_parser (2.3.1)
     reline (0.3.1)
       io-console (~> 0.5)
@@ -282,25 +281,24 @@ PLATFORMS
 DEPENDENCIES
   aws-sdk-s3 (~> 1.88, >= 1.88.1)
   bcrypt (~> 3.1.7)
-  bootsnap
+  bootsnap (~> 1.11, >= 1.11.1)
   bootstrap (~> 4.6)
   capybara (~> 3.35, >= 3.35.3)
-  cssbundling-rails
-  debug
+  cssbundling-rails (~> 1.1)
+  debug (~> 1.5.0)
   factory_bot_rails (~> 6.2)
   image_processing (~> 1.12, >= 1.12.2)
-  jsbundling-rails
+  jsbundling-rails (~> 1.0, >= 1.0.2)
   pg (~> 1.2, >= 1.2.3)
   puma (~> 5.0)
   rack-mini-profiler (~> 3.0)
   rails (~> 7.0.2, >= 7.0.2.4)
-  redis (~> 4.6)
   rspec-rails (~> 5.0, >= 5.0.1)
   selenium-webdriver (~> 4.1)
   sprockets-rails (~> 3.4, >= 3.4.2)
-  stimulus-rails
-  turbo-rails
-  tzinfo-data
+  stimulus-rails (~> 1.0, >= 1.0.4)
+  turbo-rails (~> 1.0, >= 1.0.1)
+  tzinfo-data (~> 1.2022, >= 1.2022.1)
   web-console (~> 4.2)
   webdrivers (~> 5.0)
 
