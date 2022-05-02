@@ -60,7 +60,8 @@ group :development, :test do
 
   gem 'factory_bot_rails', '~> 6.2'
 
-  gem 'rspec-rails', '~> 5.0', '>= 5.0.1'
+  gem 'rexml', '~> 3.2', '>= 3.2.5'
+  gem 'rspec-rails', '~> 5.1', '>= 5.1.2'
 end
 
 group :development do
@@ -79,7 +80,7 @@ group :test do
   gem 'capybara', '~> 3.35', '>= 3.35.3'
 
   gem 'selenium-webdriver', '~> 4.1'
+  
   # Easy installation and use of web drivers to run system tests with browsers
-
   gem 'webdrivers', '~> 5.0'
 end
