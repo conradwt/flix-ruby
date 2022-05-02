@@ -6,13 +6,19 @@ The purpose of this project is to implement an application where fans can commen
 
 ## Software requirements
 
+- ImageMagick 6.9.11 or newer
+
 - Node 14.19.1 or newer
 
 - PostgreSQL 14.1 or newer
 
-- Rails 6.1.5.1 or newer
+- Rails 7.0.2.4 or newer
 
 - Ruby 3.1.2 or newer
+
+- Vips 8.11.4 or newer
+
+- Yarn 1.22.18 or newer
 
 Note: This tutorial was updated on macOS 12.3.1.
 
@@ -42,6 +48,7 @@ Note: This tutorial was updated on macOS 12.3.1.
 
     ```zsh
     bundle install
+    yarn install
     ```
 
 4.  create, migrate, and seed the database
@@ -53,7 +60,7 @@ Note: This tutorial was updated on macOS 12.3.1.
 5.  start the server
 
     ```zsh
-    rails s
+    ./bin/dev
     ```
 
 6.  navigate to our application within the browser
