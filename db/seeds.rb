@@ -26,38 +26,38 @@ user_data = [
     username: 'chief',
     email: 'chief@example',
     password: '1qaz2wsx3edc',
-    admin: true
+    admin: false
   },
   { name: 'Cyborg',
     username: 'cyborg',
     email: 'cyborg@example.com',
-    admin: true },
+    admin: false },
   {
     name: 'Crazy Jane',
     username: 'jane',
     email: 'jane@example.com',
-    admin: true
+    admin: false
   },
   {
     name: 'Larry Trainor',
     username: 'larryt',
     email: 'larryt@example.com',
-    admin: true
+    admin: false
   },
   { name: 'Rita Farr',
     username: 'ritaf',
     email: 'ritaf@example.com',
-    admin: true },
+    admin: false },
   {
     name: 'Cliff Steele',
     username: 'cliffs',
     email: 'cliffs@example.com',
-    admin: true
+    admin: false
   },
   { name: 'Negative Man',
     username: 'negativem',
     email: 'negativem@example.com',
-    admin: true }
+    admin: false }
 ]
 
 user_data.each do |user_hash|
