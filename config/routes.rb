@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 
   resources :genres
 
-  get 'movies/filter/:filter' => 'movies#index', as: :filtered_movies
+  get 'movies/filter/:filter', to: 'movies#index', as: :filtered_movies
 
   resources :movies do
     resources :favorites
@@ -11,8 +11,10 @@ Rails.application.routes.draw do
   end
 
   resource :session, only: %i[new create destroy]
-  get 'signin' => 'sessions#new'
+  resolve('Session') { [:session] }
+
+  get 'signin', to: 'sessions#new'
 
   resources :users
-  get 'signup' => 'users#new'
+  get 'signup', to: 'users#new'
 end
