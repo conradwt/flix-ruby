@@ -10,7 +10,7 @@ The purpose of this project is to implement an application where fans can commen
 
 - Node 18.7.0 or newer
 
-- PostgreSQL 14.4 or newer
+- PostgreSQL 14.5 or newer
 
 - Rails 7.0.3.1 or newer
 
@@ -20,7 +20,7 @@ The purpose of this project is to implement an application where fans can commen
 
 - Yarn 1.22.19 or newer
 
-Note: This tutorial was updated on macOS 12.5.
+Note: This tutorial was updated on macOS 12.5.1.
 
 ## Communication
 
