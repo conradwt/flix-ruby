@@ -20,7 +20,7 @@ The purpose of this project is to implement an application where fans can commen
 
 - Yarn 1.22.19 or newer
 
-Note: This tutorial was updated on macOS 12.6.
+Note: This tutorial was updated on macOS 12.6.2.
 
 ## Communication
 
