@@ -14,7 +14,7 @@ The purpose of this project is to implement an application where fans can commen
 
 - Rails 7.0.4 or newer
 
-- Ruby 3.1.2 or newer
+- Ruby 3.2.0 or newer
 
 - Vips 8.11.4 or newer
 
