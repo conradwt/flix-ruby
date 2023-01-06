@@ -1,6 +1,6 @@
 # Flix
 
-The purpose of this project is to implement an application where fans can comment on and rate movies . This application was built as part of the The Pragmatic Studios' Ruby on Rails 6 course exercises. Also, the running application can be found [here](https://flix-cwt.herokuapp.com).
+The purpose of this project is to implement an application where fans can comment on and rate movies. This application was built as part of the The Pragmatic Studios' Ruby on Rails 6 course exercises.
 
 ## Getting Started
 
