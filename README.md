@@ -12,11 +12,13 @@ The purpose of this project is to implement an application where fans can commen
 
 - PostgreSQL 14.6 or newer
 
+- Python >= 2.7 and < 3.0
+
 - Rails 7.0.4 or newer
 
 - Ruby 3.2.0 or newer
 
-- Vips 8.11.4 or newer
+- Vips 8.13.3 or newer
 
 - Yarn 1.22.19 or newer
 
