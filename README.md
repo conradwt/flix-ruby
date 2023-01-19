@@ -14,7 +14,7 @@ The purpose of this project is to implement an application where fans can commen
 
 - Python >= 2.7 and < 3.0
 
-- Rails 7.0.4 or newer
+- Rails 7.0.4.1 or newer
 
 - Ruby 3.2.0 or newer
 
