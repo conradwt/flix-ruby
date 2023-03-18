@@ -8,15 +8,15 @@ The purpose of this project is to implement an application where fans can commen
 
 - ImageMagick 6.9.11 or newer
 
-- Node 18.14.0 or newer
+- Node 18.15.0 or newer
 
 - PostgreSQL 14.7 or newer
 
 - Python >= 2.7 and < 3.0
 
-- Rails 7.0.4.2 or newer
+- Rails 7.0.4.3 or newer
 
-- Ruby 3.2.0 or newer
+- Ruby 3.2.1 or newer
 
 - Vips 8.13.3 or newer
 
