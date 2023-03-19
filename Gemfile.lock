@@ -290,7 +290,7 @@ DEPENDENCIES
   pg (~> 1.2, >= 1.2.3)
   puma (~> 5.0)
   rack-mini-profiler (~> 3.0)
-  rails (~> 7.0, >= 7.0.4.2)
+  rails (~> 7.0, >= 7.0.4.3)
   rexml (~> 3.2, >= 3.2.5)
   rspec-rails (~> 5.1, >= 5.1.2)
   selenium-webdriver (~> 4.1)
@@ -302,7 +302,7 @@ DEPENDENCIES
   webdrivers (~> 5.0)
 
 RUBY VERSION
-   ruby 3.2.0p0
+   ruby 3.2.1p31
 
 BUNDLED WITH
-   2.3.26
+   2.4.6
