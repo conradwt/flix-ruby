@@ -14,7 +14,7 @@ The purpose of this project is to implement an application where fans can commen
 
 - Python >= 2.7 and < 3.0
 
-- Rails 7.0.4.3 or newer
+- Rails 7.0.5 or newer
 
 - Ruby 3.2.2 or newer
 
@@ -22,7 +22,7 @@ The purpose of this project is to implement an application where fans can commen
 
 - Yarn 1.22.19 or newer
 
-Note: This tutorial was updated on macOS 13.3.1.
+Note: This tutorial was updated on macOS 13.4.
 
 ## Communication
 
