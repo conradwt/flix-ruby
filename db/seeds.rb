@@ -264,4 +264,4 @@ end
 # movie_titles_and_filenames.each do |title, file_name|
 #   movie = Movie.find_by(title: title)
 #   file = File.open(Rails.root.join("app/assets/images/#{file_name}"))
-#   movie.main_image.attach(io: file filename: file_name)
+#   movie.main_image.attach(io: file, filename: file_name)
