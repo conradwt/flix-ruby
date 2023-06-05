@@ -257,7 +257,7 @@ end
 # or short solution
 #
 
-# movie_titles_and_filenames = Movie.pluck(:title, :slug).map do | title, slug |
+# movie_titles_and_filenames = Movie.pluck(:title, :slug).map do |title, slug|
 #   [title, "#{slug}.png"]
 # end
 
@@ -265,3 +265,4 @@ end
 #   movie = Movie.find_by(title: title)
 #   file = File.open(Rails.root.join("app/assets/images/#{file_name}"))
 #   movie.main_image.attach(io: file, filename: file_name)
+# end
