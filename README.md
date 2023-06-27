@@ -8,13 +8,13 @@ The purpose of this project is to implement an application where fans can commen
 
 - ImageMagick 6.9.11 or newer
 
-- Node 20.0 or newer
+- Node 20.3.1 or newer
 
-- PostgreSQL 15.1 or newer
+- PostgreSQL 15.3 or newer
 
 - Python >= 2.7 and < 3.0
 
-- Rails 7.0.5 or newer
+- Rails 7.0.5.1 or newer
 
 - Ruby 3.2.2 or newer
 
@@ -22,7 +22,7 @@ The purpose of this project is to implement an application where fans can commen
 
 - Yarn 1.22.19 or newer
 
-Note: This tutorial was updated on macOS 13.4.
+Note: This tutorial was updated on macOS 13.4.1.
 
 ## Communication
 
