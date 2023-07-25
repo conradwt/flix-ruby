@@ -19,6 +19,7 @@ user_data = [
     name: 'Conrad Taylor',
     username: 'conradwt',
     email: 'conradwt@example.com',
+    password: '1qaz2wsx3edc',
     admin: true
   },
   {
@@ -31,32 +32,38 @@ user_data = [
   { name: 'Cyborg',
     username: 'cyborg',
     email: 'cyborg@example.com',
+    password: '1qaz2wsx3edc',
     admin: false },
   {
     name: 'Crazy Jane',
     username: 'jane',
     email: 'jane@example.com',
+    password: '1qaz2wsx3edc',
     admin: false
   },
   {
     name: 'Larry Trainor',
     username: 'larryt',
     email: 'larryt@example.com',
+    password: '1qaz2wsx3edc',
     admin: false
   },
   { name: 'Rita Farr',
     username: 'ritaf',
     email: 'ritaf@example.com',
+    password: '1qaz2wsx3edc',
     admin: false },
   {
     name: 'Cliff Steele',
     username: 'cliffs',
     email: 'cliffs@example.com',
+    password: '1qaz2wsx3edc',
     admin: false
   },
   { name: 'Negative Man',
     username: 'negativem',
     email: 'negativem@example.com',
+    password: '1qaz2wsx3edc',
     admin: false }
 ]
 
