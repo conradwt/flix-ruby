@@ -13,6 +13,7 @@ amazon:
   secret_access_key: <%= Rails.application.credentials.dig(:aws, :secret_access_key) %>
   region: us-west-2
   bucket: flix-cwt
+  
 # Remember not to checkin your GCS keyfile to a repository
 # google:
 #   service: GCS

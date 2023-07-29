@@ -1,5 +1,5 @@
-<%= form_with(model: user, local: true) do |f| %>
-  <%= render 'shared/errors', object: user %>
+<%= form_with(model: user) do |f| %>
+  <%= render "shared/errors", object: user %>
 
   <%= f.label :name %>
   <%= f.text_field :name, autofocus: true %>
@@ -7,18 +7,15 @@
   <%= f.label :email %>
   <%= f.email_field :email %>
 
-  <%= f.label :username %>
-  <%= f.text_field :username %>
-
   <%= f.label :password %>
-  <%= f.password_field :password, autofocus: true %>
+  <%= f.password_field :password %>
 
-  <%= f.label :password_confirmation, 'Confirm Password' %>
+  <%= f.label :password_confirmation, "Confirm Password" %>
   <%= f.password_field :password_confirmation %>
 
   <% if user.new_record? %>
-    <%= f.submit 'Create Account' %>
+    <%= f.submit "Create Account" %>
   <% else %>
-    <%= f.submit 'Update Account' %>
+    <%= f.submit "Update Account" %>
   <% end %>
 <% end %>

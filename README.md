@@ -1,6 +1,6 @@
 # Flix
 
-The purpose of this project is to implement an application where fans can comment on and rate movies. This application was built as part of the The Pragmatic Studios' Ruby on Rails 6 course exercises.
+The purpose of this project is to implement an application where fans can comment on and rate movies. This application was built as part of the The Pragmatic Studios' Ruby on Rails 7 course exercises.
 
 ## Getting Started
 
@@ -8,21 +8,13 @@ The purpose of this project is to implement an application where fans can commen
 
 - ImageMagick 6.9.11 or newer
 
-- Node 20.3.1 or newer
-
 - PostgreSQL 15.3 or newer
-
-- Python >= 2.7 and < 3.0
 
 - Rails 7.0.6 or newer
 
 - Ruby 3.2.2 or newer
 
-- Vips 8.13.3 or newer
-
-- Yarn 1.22.19 or newer
-
-Note: This tutorial was updated on macOS 13.4.1.
+Note: This tutorial was updated on macOS 13.5.
 
 ## Communication
 
@@ -103,4 +95,4 @@ Flix is released under the [MIT license](./LICENSE.md).
 
 ## Copyright
 
-copyright:: (c) Copyright 2021 - 2023 Conrad Taylor. All Rights Reserved.
+copyright:: (c) Copyright 2021 - 2023 Conrad Taylor. All rights reserved.
