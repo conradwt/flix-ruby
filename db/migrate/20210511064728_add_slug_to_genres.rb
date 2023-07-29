@@ -1,4 +1,4 @@
-class AddSlugToGenres < ActiveRecord::Migration[6.1]
+class AddSlugToGenres < ActiveRecord::Migration[7.0]
   def up
     add_column :genres, :slug, :string
 

@@ -3,19 +3,13 @@
     <%= link_to image_tag("logo.png"), movies_path %>
     <ul class="left">
       <li>
-        <%= nav_link_to 'Released', movies_path %>
+        <%= link_to "Released", movies_path %>
       </li>
       <li>
-        <%= nav_link_to 'Upcoming', filtered_movies_path(:upcoming) %>
+        <%= link_to 'Upcoming', filtered_movies_path(:upcoming) %>
       </li>
       <li>
-        <%= nav_link_to 'Recent', filtered_movies_path(:recent) %>
-      </li>
-      <li>
-        <%= nav_link_to 'Hits', filtered_movies_path(:hits) %>
-      </li>
-      <li>
-        <%= nav_link_to 'Flops', filtered_movies_path(:flops) %>
+        <%= link_to 'Recent', filtered_movies_path(:recent) %>
       </li>
     </ul>
     <ul class="right">
@@ -24,14 +18,16 @@
           <%= link_to current_user.name, current_user %>
         </li>
         <li>
-          <%= link_to "Sign Out", session_path, data: { turbo_method: :delete }, class: 'button' %>
+          <%= link_to "Sign Out", session_path,
+                data: { turbo_method: :delete },
+                class: "button" %>
         </li>
       <% else %>
         <li>
-          <%= link_to "Sign In", signin_path, class: 'button' %>
+          <%= link_to "Sign In", new_session_path, class: "button" %>
         </li>
         <li>
-          <%= link_to "Sign Up", signup_path, class: 'button' %>
+          <%= link_to "Sign Up", signup_path, class: "button" %>
         </li>
       <% end %>
     </ul>

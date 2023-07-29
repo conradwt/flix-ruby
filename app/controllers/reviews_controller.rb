@@ -15,40 +15,17 @@ class ReviewsController < ApplicationController
     @review.user = current_user
 
     if @review.save
-      redirect_to movie_reviews_url(@movie), notice: 'Thanks for your review!'
+      redirect_to movie_reviews_path(@movie),
+                  notice: 'Thanks for your review!'
     else
-      render :new
-    end
-  end
-
-  def edit
-    @review = @movie.reviews.find_by(id: params[:id])
-  end
-
-  def update
-    @review = @movie.reviews.find_by(id: params[:id])
-
-    if @review&.update(review_params)
-      redirect_to movie_reviews_url(@movie), notice: 'Thanks for updating your review!'
-    else
-      render :edit
-    end
-  end
-
-  def destroy
-    @review = @movie.reviews.find_by(id: params[:id])
-
-    if @review&.destroy
-      redirect_to movie_reviews_url(@movie), notice: "Sorry to hear that you're deleting your review."
-    else
-      redirect_to movie_reviews_url(@movie), alert: 'There was a problem deleting your review.  Please try again.'
+      render :new, status: :unprocessable_entity
     end
   end
 
   private
 
   def review_params
-    params.require(:review).permit(:stars, :comment)
+    params.require(:review).permit(:comment, :stars)
   end
 
   def set_movie

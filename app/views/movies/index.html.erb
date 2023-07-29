@@ -5,13 +5,13 @@
     </div>
     <div class="summary">
       <h2>
-        <%= link_to movie.title, movie %>
+        <%= link_to(movie.title, movie) %>
       </h2>
       <h3>
         <%= total_gross(movie) %>
       </h3>
       <span class="stars">
-        <%= render "shared/stars", percent: movie.average_stars_as_percent %>
+        <%= average_stars(movie) %>
       </span>
       <p>
         <%= truncate(movie.description, length: 150, separator: ' ') %>
