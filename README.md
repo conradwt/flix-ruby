@@ -10,7 +10,7 @@ The purpose of this project is to implement an application where fans can commen
 
 - PostgreSQL 15.3 or newer
 
-- Rails 7.0.6 or newer
+- Rails 7.0.7 or newer
 
 - Ruby 3.2.2 or newer
 
