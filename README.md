@@ -54,7 +54,7 @@ Note: This tutorial was updated on macOS 13.5.1.
 5.  start the server
 
     ```zsh
-    ./bin/dev
+    bin/rails server
     ```
 
 6.  navigate to our application within the browser
