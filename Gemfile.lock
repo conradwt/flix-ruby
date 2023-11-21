@@ -81,8 +81,8 @@ GEM
     autoprefixer-rails (10.4.15.0)
       execjs (~> 2)
     aws-eventstream (1.2.0)
-    aws-partitions (1.853.0)
-    aws-sdk-core (3.187.0)
+    aws-partitions (1.854.0)
+    aws-sdk-core (3.187.1)
       aws-eventstream (~> 1, >= 1.0.2)
       aws-partitions (~> 1, >= 1.651.0)
       aws-sigv4 (~> 1.5)
@@ -127,7 +127,7 @@ GEM
       ruby2_keywords
     erubi (1.12.0)
     execjs (2.9.1)
-    factory_bot (6.4.0)
+    factory_bot (6.4.1)
       activesupport (>= 5.0.0)
     factory_bot_rails (6.4.0)
       factory_bot (~> 6.4)
@@ -178,7 +178,7 @@ GEM
       timeout
     net-smtp (0.4.0)
       net-protocol
-    nio4r (2.6.0)
+    nio4r (2.6.1)
     nokogiri (1.15.5-arm64-darwin)
       racc (~> 1.4)
     nokogiri (1.15.5-x86_64-darwin)
