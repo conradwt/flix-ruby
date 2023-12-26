@@ -12,9 +12,9 @@ The purpose of this project is to implement an application where fans can commen
 
 - Rails 7.1.2 or newer
 
-- Ruby 3.2.2 or newer
+- Ruby 3.3.0 or newer
 
-Note: This tutorial was updated on macOS 14.1.1.
+Note: This tutorial was updated on macOS 14.2.1.
 
 ## Communication
 
