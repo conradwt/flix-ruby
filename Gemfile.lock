@@ -192,7 +192,7 @@ GEM
     psych (5.1.2)
       stringio
     public_suffix (5.0.4)
-    puma (6.4.0)
+    puma (6.4.1)
       nio4r (~> 2.0)
     racc (1.7.3)
     rack (3.0.8)
@@ -336,7 +336,7 @@ DEPENDENCIES
   importmap-rails (~> 1.2, >= 1.2.1)
   jbuilder (~> 2.11, >= 2.11.5)
   pg (~> 1.5, >= 1.5.3)
-  puma (~> 6.3)
+  puma (~> 6.4.1)
   rack-mini-profiler (~> 3.0)
   rails (~> 7.1.2)
   redis (~> 5.0, >= 5.0.6)
