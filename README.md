@@ -10,7 +10,7 @@ The purpose of this project is to implement an application where fans can commen
 
 - PostgreSQL 15.5 or newer
 
-- Rails 7.1.2 or newer
+- Rails 7.1.3 or newer
 
 - Ruby 3.3.0 or newer
 
@@ -95,4 +95,4 @@ Flix is released under the [MIT license](./LICENSE.md).
 
 ## Copyright
 
-copyright:: (c) Copyright 2021 - 2023 Conrad Taylor. All rights reserved.
+copyright:: (c) Copyright 2021 - 2024 Conrad Taylor. All rights reserved.
