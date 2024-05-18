@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '3.3.0'
+ruby '3.3.1'
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem 'rails', '~> 7.1.3.2'
@@ -16,13 +16,13 @@ gem 'pg', '~> 1.5', '>= 1.5.3'
 gem 'puma', '~> 6.4.2'
 
 # Use JavaScript with ESM import maps [https://github.com/rails/importmap-rails]
-gem 'importmap-rails', '~> 1.2', '>= 1.2.1'
+gem 'importmap-rails', '~> 2.0', '>= 2.0.1'
 
 # Hotwire's SPA-like page accelerator [https://turbo.hotwired.dev]
-gem 'turbo-rails', '~> 1.4'
+gem 'turbo-rails', '~> 2.0', '>= 2.0.5'
 
 # Hotwire's modest JavaScript framework [https://stimulus.hotwired.dev]
-gem 'stimulus-rails', '~> 1.2', '>= 1.2.1'
+gem 'stimulus-rails', '~> 1.3', '>= 1.3.3'
 
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 gem 'jbuilder', '~> 2.11', '>= 2.11.5'
@@ -43,7 +43,8 @@ gem 'tzinfo-data', '~> 1.2022', '>= 1.2022.1', platforms: %i[mingw mswin x64_min
 gem 'bootsnap', '~> 1.11', '>= 1.11.1', require: false
 
 # Use Sass to process CSS
-# gem "sassc-rails"
+gem 'dartsass-rails', '~> 0.5.0'
+# gem 'dartsass-sprockets', '~> 3.1'
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 gem 'aws-sdk-s3', '~> 1.88', '>= 1.88.1', require: false
