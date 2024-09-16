@@ -8,13 +8,13 @@ The purpose of this project is to implement an application where fans can commen
 
 - ImageMagick 6.9.13 or newer
 
-- PostgreSQL 16.2 or newer
+- PostgreSQL 16.4 or newer
 
 - Rails 7.1.3.4 or newer
 
 - Ruby 3.3.4 or newer
 
-Note: This tutorial was updated on macOS 14.5.
+Note: This tutorial was updated on macOS 14.6.1.
 
 ## Communication
 
