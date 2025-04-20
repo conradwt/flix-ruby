@@ -53,10 +53,10 @@ group :development, :test do
   # Static analysis for security vulnerabilities [https://brakemanscanner.org/]
   gem 'brakeman', '~> 7.0', '>= 7.0.2', require: false
   
-  gem 'factory_bot_rails', '~> 6.2'
+  gem 'factory_bot_rails', '~> 6.4', '>= 6.4.4'
 
-  gem 'rexml', '~> 3.2', '>= 3.2.5'
-  gem 'rspec-rails', '~> 5.1', '>= 5.1.2'
+  gem 'rexml', '~> 3.4', '>= 3.4.1'
+  gem 'rspec-rails', '~> 7.1', '>= 7.1.1'
 
   # Omakase Ruby styling [https://github.com/rails/rubocop-rails-omakase/]
   gem 'rubocop-rails-omakase', '~> 1.1', require: false
@@ -69,7 +69,7 @@ end
 
 group :test do
   # Adds support for Capybara system testing and selenium driver
-  gem 'capybara', '~> 3.35', '>= 3.35.3'
+  gem 'capybara', '~> 3.40'
 
-  gem 'selenium-webdriver', '~> 4.17.0'
+  gem 'selenium-webdriver', '~> 4.31'
 end
