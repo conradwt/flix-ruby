@@ -8,13 +8,13 @@ The purpose of this project is to implement an application where fans can commen
 
 - ImageMagick 6.9.13 or newer
 
-- PostgreSQL 16.4 or newer
+- PostgreSQL 17.4 or newer
 
-- Rails 7.1.3.4 or newer
+- Rails 8.0.2 or newer
 
 - Ruby 3.4.3 or newer
 
-Note: This tutorial was updated on macOS 15.4.
+Note: This tutorial was updated on macOS 15.4.1.
 
 ## Communication
 
@@ -95,4 +95,4 @@ Flix is released under the [MIT license](./LICENSE.md).
 
 ## Copyright
 
-copyright:: (c) Copyright 2021 - 2024 Conrad Taylor. All rights reserved.
+copyright:: (c) Copyright 2021 - 2025 Conrad Taylor. All rights reserved.
