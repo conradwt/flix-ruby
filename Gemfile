@@ -44,7 +44,7 @@ gem 'thruster', '~> 0.1.12', require: false
 gem 'aws-sdk-s3', '~> 1.88', '>= 1.88.1', require: false
 gem 'image_processing', '~> 1.12', '>= 1.12.2'
 
-gem 'bootstrap', '~> 5.1', '>= 5.1.3'
+gem 'bootstrap', '~> 5.3'
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
