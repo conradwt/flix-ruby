@@ -38,7 +38,7 @@ gem 'dartsass-rails', '~> 0.5.0'
 gem 'kamal', '~> 2.5', '>= 2.5.3', require: false
 
 # Add HTTP asset caching/compression and X-Sendfile acceleration to Puma [https://github.com/basecamp/thruster/]
-gem 'thruster', '~> 0.1.12', require: false
+gem 'thruster', '~> 0.1.13', require: false
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 gem 'aws-sdk-s3', '~> 1.88', '>= 1.88.1', require: false
