@@ -56,7 +56,7 @@ group :development, :test do
   gem 'factory_bot_rails', '~> 6.4', '>= 6.4.4'
 
   gem 'rexml', '~> 3.4', '>= 3.4.1'
-  gem 'rspec-rails', '~> 7.1', '>= 7.1.1'
+  gem 'rspec-rails', '~> 8.0'
 
   # Omakase Ruby styling [https://github.com/rails/rubocop-rails-omakase/]
   gem 'rubocop-rails-omakase', '~> 1.1', require: false
