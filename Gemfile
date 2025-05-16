@@ -29,7 +29,7 @@ gem 'solid_queue', '~> 1.1', '>= 1.1.4'
 gem 'solid_cable', '~> 3.0', '>= 3.0.7'
 
 # Reduces boot times through caching; required in config/boot.rb
-gem 'bootsnap', '~> 1.18', '>= 1.18.4', require: false
+gem 'bootsnap', '~> 1.18', require: false
 
 # Use Sass to process CSS
 gem 'dartsass-rails', '~> 0.5.0'
