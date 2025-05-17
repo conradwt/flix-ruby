@@ -7,7 +7,7 @@ gem 'propshaft', '~> 1.1'
 # Use postgresql as the database for Active Record
 gem 'pg', '~> 1.5', '>= 1.5.3'
 # Use the Puma web server [https://github.com/puma/puma]
-gem 'puma', '~> 6.4.2'
+gem 'puma', '~> 6.6.0'
 # Use JavaScript with ESM import maps [https://github.com/rails/importmap-rails]
 gem 'importmap-rails', '~> 2.0', '>= 2.0.1'
 # Hotwire's SPA-like page accelerator [https://turbo.hotwired.dev]
@@ -56,7 +56,7 @@ group :development, :test do
   gem 'factory_bot_rails', '~> 6.4', '>= 6.4.4'
 
   gem 'rexml', '~> 3.4', '>= 3.4.1'
-  gem 'rspec-rails', '~> 7.1', '>= 7.1.1'
+  gem 'rspec-rails', '~> 8.0'
 
   # Omakase Ruby styling [https://github.com/rails/rubocop-rails-omakase/]
   gem 'rubocop-rails-omakase', '~> 1.1', require: false
