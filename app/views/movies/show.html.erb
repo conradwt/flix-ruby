@@ -14,10 +14,10 @@
 %>
 
 <section class="flex flex-col md:flex-row gap-8">
-  <div class="md:w-1/4 text-center md:text-left">
-    <%= main_image(@movie, class: "w-40 md:w-full rounded-lg shadow-lg mx-auto md:mx-0 mt-2") %>
+  <div class="w-full md:w-1/4 flex flex-col items-center mb-6 md:mb-0">
+    <%= main_image(@movie, class: "rounded-lg shadow-lg mt-2 object-cover", width: "150", height: "222.75") %>
     <% if current_user %>
-      <div class="mt-4 flex justify-center md:justify-start">
+      <div class="mt-4 flex justify-center">
         <% if @favorite %>
           <%= button_to "♡ Unfave", movie_favorite_path(@movie, @favorite), method: :delete, class: unfave_action_button_classes %>
         <% else %>
@@ -30,7 +30,7 @@
     <% end %>
   </div>
 
-  <div class="md:w-1/2 text-left">
+  <div class="w-full md:w-1/2 text-left mb-6 md:mb-0">
     <h1 class="text-4xl font-bold text-gray-900"><%= @movie.title %></h1>
     <h2 class="text-xl text-gray-500 mt-1">
       <%= year_of(@movie) %> &bull; <%= @movie.rating %>
@@ -63,7 +63,7 @@
           class: review_button_classes %>
   </div>
 
-  <aside class="md:w-1/4 space-y-6">
+  <aside class="w-full md:w-1/4 space-y-6">
     <% if @fans.present? %>
       <div>
         <h4 class="text-base text-gray-500 uppercase border-b border-gray-300 pb-1 mb-2">Fans</h4>

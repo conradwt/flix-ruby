@@ -1,9 +1,9 @@
 /* Error: Undefined variable.
  *    ,
- * 44 |   background-color: $primary;
- *    |                     ^^^^^^^^
+ * 43 |     color: $light-gray;
+ *    |            ^^^^^^^^^^^
  *    '
- *   app/assets/stylesheets/custom.scss 44:21      @import
+ *   app/assets/stylesheets/custom.scss 43:12      @import
  *   app/assets/stylesheets/application.scss 11:9  root stylesheet */
 
 body::before {
@@ -14,5 +14,5 @@ body::before {
   padding: 1em;
   margin-bottom: 1em;
   border-bottom: 2px solid black;
-  content: "Error: Undefined variable.\a    \2577 \a 44 \2502    background-color: $primary;\a    \2502                      ^^^^^^^^\a    \2575 \a   app/assets/stylesheets/custom.scss 44:21      @import\a   app/assets/stylesheets/application.scss 11:9  root stylesheet";
+  content: "Error: Undefined variable.\a    \2577 \a 43 \2502      color: $light-gray;\a    \2502             ^^^^^^^^^^^\a    \2575 \a   app/assets/stylesheets/custom.scss 43:12      @import\a   app/assets/stylesheets/application.scss 11:9  root stylesheet";
 }
