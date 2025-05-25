@@ -1,71 +1,99 @@
-<section class="movie-details">
-  <div class="image">
-    <%= main_image(@movie) %>
+<%
+  # Define common Tailwind CSS classes for elements on this page.
+  review_button_classes = "inline-block bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded shadow-md tracking-wider uppercase text-sm mt-4 transition-colors duration-150 ease-in-out"
+  admin_button_classes = "bg-gray-800 hover:bg-gray-700 text-white font-semibold py-2 px-4 rounded-md shadow-sm tracking-wider uppercase text-sm transition-colors duration-150 ease-in-out focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-opacity-50"
+
+  # Classes for the fave/unfave button (part of the input group like structure)
+  # The button_to helper will generate a form and a button. We apply classes to the button.
+  # border-r-0 and rounded-r-none are for the button part of the group.
+  fave_button_base_classes = "py-2 px-4 border border-gray-300 text-sm font-medium focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-1"
+  fave_action_button_classes = "#{fave_button_base_classes} text-blue-600 bg-white hover:bg-gray-50 border-r-0 rounded-l-md"
+  unfave_action_button_classes = "#{fave_button_base_classes} text-red-600 bg-white hover:bg-gray-50 border-r-0 rounded-l-md"
+  # Classes for the count part of the input group.
+  fave_count_classes = "px-3 py-2 border border-l-0 border-gray-300 bg-gray-50 text-sm text-gray-700 rounded-r-md"
+%>
+
+<section class="flex flex-col md:flex-row gap-8">
+  <div class="md:w-1/4 text-center md:text-left">
+    <%= main_image(@movie, class: "w-40 md:w-full rounded-lg shadow-lg mx-auto md:mx-0 mt-2") %>
     <% if current_user %>
-      <div class="faves">
-        <%= fave_or_unfave_button(@movie, @favorite) %>
-        <div class="count">
+      <div class="mt-4 flex justify-center md:justify-start">
+        <% if @favorite %>
+          <%= button_to "♡ Unfave", movie_favorite_path(@movie, @favorite), method: :delete, class: unfave_action_button_classes %>
+        <% else %>
+          <%= button_to "♥️ Fave", movie_favorites_path(@movie), class: fave_action_button_classes %>
+        <% end %>
+        <div class="<%= fave_count_classes %>">
           <%= @fans.size %>
         </div>
       </div>
     <% end %>
   </div>
-  <div class="details">
-    <h1><%= @movie.title %></h1>
-    <h2>
+
+  <div class="md:w-1/2 text-left">
+    <h1 class="text-4xl font-bold text-gray-900"><%= @movie.title %></h1>
+    <h2 class="text-xl text-gray-500 mt-1">
       <%= year_of(@movie) %> &bull; <%= @movie.rating %>
     </h2>
-    <div class="reviews">
-      <%= average_stars(@movie) %>
+    <div class="reviews mt-3 mb-2 flex items-center space-x-2">
+      <span class="text-orange-500"><%= average_stars(@movie) %></span>
       <%= link_to pluralize(@movie.reviews.size, "review"),
-            movie_reviews_path(@movie) %>
+            movie_reviews_path(@movie), class: "text-blue-600 hover:underline" %>
     </div>
-    <p>
+    <p class="mt-4 text-lg text-gray-900 leading-relaxed">
       <%= @movie.description %>
     </p>
-    <table>
-      <tr>
-        <th>Director:</th>
-        <td><%= @movie.director %></td>
-      </tr>
-      <tr>
-        <th>Duration:</th>
-        <td><%= @movie.duration %></td>
-      </tr>
-      <tr>
-        <th>Total Gross:</th>
-        <td><%= total_gross(@movie) %></td>
-      </tr>
+    <table class="mt-6 w-full text-left text-sm">
+      <tbody>
+        <tr class="border-b border-gray-300">
+          <th class="py-2 pr-4 font-semibold text-gray-900">Director:</th>
+          <td class="py-2 text-gray-700"><%= @movie.director %></td>
+        </tr>
+        <tr class="border-b border-gray-300">
+          <th class="py-2 pr-4 font-semibold text-gray-900">Duration:</th>
+          <td class="py-2 text-gray-700"><%= @movie.duration %></td>
+        </tr>
+        <tr>
+          <th class="py-2 pr-4 font-semibold text-gray-900">Total Gross:</th>
+          <td class="py-2 text-gray-700"><%= total_gross(@movie) %></td>
+        </tr>
+      </tbody>
     </table>
     <%= link_to "Write Review", new_movie_review_path(@movie),
-          class: "review" %>
+          class: review_button_classes %>
   </div>
-  <aside>
+
+  <aside class="md:w-1/4 space-y-6">
     <% if @fans.present? %>
-      <h4>Fans</h4>
-      <ul>
-        <% @fans.each do |user| %>
-          <li>
-            <%= link_to user.name, user %>
-          </li>
-        <% end %>
-      </ul>
+      <div>
+        <h4 class="text-base text-gray-500 uppercase border-b border-gray-300 pb-1 mb-2">Fans</h4>
+        <ul class="list-none pl-1 space-y-1">
+          <% @fans.each do |user| %>
+            <li class="text-sm">
+              <%= link_to user.name, user, class: "text-blue-600 hover:underline" %>
+            </li>
+          <% end %>
+        </ul>
+      </div>
     <% end %>
     <% if @genres.present? %>
-      <h4>Genres</h4>
-      <ul>
-        <% @genres.each do |g| %>
-          <li><%= g.name %></li>
-        <% end %>
-      </ul>
+      <div>
+        <h4 class="text-base text-gray-500 uppercase border-b border-gray-300 pb-1 mb-2">Genres</h4>
+        <ul class="list-none pl-1 space-y-1">
+          <% @genres.each do |g| %>
+            <li class="text-sm text-gray-700"><%= g.name %></li>
+          <% end %>
+        </ul>
+      </div>
     <% end %>
   </aside>
 </section>
 
 <% if current_user_admin? %>
-  <section class="admin">
-    <%= link_to "Edit", edit_movie_path(@movie), class: "button" %>
-    <%= link_to "Delete", movie_path(@movie), class: "button",
+  <section class="admin text-center my-12 py-8 border-t border-dashed border-gray-300">
+    <%= link_to "Edit", edit_movie_path(@movie), class: admin_button_classes %>
+    <%= link_to "Delete", movie_path(@movie),
+         class: "#{admin_button_classes} bg-red-600 hover:bg-red-700 ml-2",
          data: { turbo_method: :delete, turbo_confirm: "Are you sure?" } %>
   </section>
 <% end %>

@@ -1,33 +1,42 @@
-<header>
-  <nav>
-    <%= link_to image_tag("logo.png"), movies_path %>
-    <ul class="left">
-      <li>
-        <%= link_to "Released", movies_path %>
-      </li>
-      <li>
-        <%= link_to 'Upcoming', filtered_movies_path(:upcoming) %>
-      </li>
-      <li>
-        <%= link_to 'Recent', filtered_movies_path(:recent) %>
-      </li>
-    </ul>
-    <ul class="right">
+<%
+  nav_link_classes = "text-lg text-blue-300 hover:text-gray-100 pb-px hover:border-b hover:border-gray-100 transition-colors duration-150 ease-in-out"
+  button_classes = "text-lg py-2 px-4 border border-gray-100 text-gray-100 rounded hover:bg-gray-100 hover:text-blue-600 focus:outline-none focus:ring-2 focus:ring-gray-100 focus:ring-opacity-50 transition-colors duration-150 ease-in-out"
+%>
+<header class="bg-blue-600 mb-12">
+  <nav class="container mx-auto flex flex-wrap md:flex-nowrap items-center justify-between p-4">
+    <!-- Logo and primary navigation -->
+    <div class="flex flex-wrap items-center">
+      <%= link_to image_tag("logo.png", alt: "Flix Logo", class: "h-12 mr-3 md:mr-6"), movies_path %>
+      <ul class="flex flex-wrap items-center space-x-3 tracking-wider mt-2 md:mt-0">
+        <li>
+          <%= link_to "Released", movies_path, class: nav_link_classes %>
+        </li>
+        <li>
+          <%= link_to 'Upcoming', filtered_movies_path(:upcoming), class: nav_link_classes %>
+        </li>
+        <li>
+          <%= link_to 'Recent', filtered_movies_path(:recent), class: nav_link_classes %>
+        </li>
+      </ul>
+    </div>
+
+    <!-- User navigation -->
+    <ul class="flex flex-wrap items-center space-x-3 tracking-wider mt-4 md:mt-0">
       <% if current_user %>
         <li>
-          <%= link_to current_user.name, current_user %>
+          <%= link_to current_user.name, current_user, class: nav_link_classes %>
         </li>
         <li>
           <%= link_to "Sign Out", session_path,
                 data: { turbo_method: :delete },
-                class: "button" %>
+                class: button_classes %>
         </li>
       <% else %>
         <li>
-          <%= link_to "Sign In", new_session_path, class: "button" %>
+          <%= link_to "Sign In", new_session_path, class: button_classes %>
         </li>
         <li>
-          <%= link_to "Sign Up", signup_path, class: "button" %>
+          <%= link_to "Sign Up", signup_path, class: button_classes %>
         </li>
       <% end %>
     </ul>

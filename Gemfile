@@ -34,6 +34,9 @@ gem 'bootsnap', '~> 1.18', '>= 1.18.4', require: false
 # Use Sass to process CSS
 gem 'dartsass-rails', '~> 0.5.0'
 
+# Use Tailwind CSS
+gem "tailwindcss-rails", "~> 4.2.3"
+
 # Deploy this application anywhere as a Docker container [https://kamal-deploy.org]
 gem 'kamal', '~> 2.5', '>= 2.5.3', require: false
 
@@ -43,8 +46,6 @@ gem 'thruster', '~> 0.1.12', require: false
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 gem 'aws-sdk-s3', '~> 1.88', '>= 1.88.1', require: false
 gem 'image_processing', '~> 1.12', '>= 1.12.2'
-
-gem 'bootstrap', '~> 5.1', '>= 5.1.3'
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem

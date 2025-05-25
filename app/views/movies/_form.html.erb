@@ -1,33 +1,75 @@
-<%= form_with(model: movie) do |f| %>
+<%
+  form_field_wrapper_classes = "mb-6"
+  label_classes = "block text-lg font-semibold text-gray-900 mb-1"
+  input_base_classes = "block w-full border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 sm:text-sm disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 disabled:shadow-none invalid:border-pink-500 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500"
+  text_input_classes = "#{input_base_classes} px-3 py-2 bg-white"
+  textarea_classes = "#{input_base_classes} px-3 py-2 bg-white"
+  select_classes = "#{input_base_classes} pl-3 pr-10 py-2 bg-white"
+  # Rails date_select generates multiple select tags.
+  # We apply classes to each individual select tag via the html_options (the third hash argument to date_select).
+  date_select_html_options = { class: "#{input_base_classes} inline-block w-auto py-2 pl-3 pr-8 mr-2 bg-white" }
+  file_input_classes = "block w-full text-sm text-slate-500 file:mr-4 file:py-2 file:px-4 file:rounded-md file:border-0 file:text-sm file:font-semibold file:bg-blue-600 file:text-white hover:file:bg-blue-700"
+  checkbox_group_wrapper_classes = "mt-6 mb-6" # For the div around collection_check_boxes
+  checkbox_item_wrapper_classes = "flex items-center mb-2" # For each checkbox + label pair
+  checkbox_input_classes = "h-5 w-5 rounded border-gray-300 text-blue-600 focus:ring-blue-500"
+  checkbox_label_classes = "ml-2 text-sm font-medium text-gray-700"
+  submit_button_classes = "w-full flex justify-center py-3 px-4 border border-transparent rounded-md shadow-sm text-lg font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 mt-8"
+%>
+
+<%= form_with(model: movie, class: "max-w-xl mx-auto mt-8") do |f| %>
   <%= render "shared/errors", object: movie %>
 
-  <%= f.label :title %>
-  <%= f.text_field :title, autofocus: true %>
-
-  <%= f.label :description %>
-  <%= f.text_area :description, rows: 10 %>
-
-  <%= f.label :rating %>
-  <%= f.select :rating, Movie::RATINGS, prompt: "Pick one" %>
-
-  <%= f.label :released_on %>
-  <%= f.date_select :released_on, {}, {class: "date"} %>
-
-  <%= f.label :total_gross %>
-  <%= f.number_field :total_gross %>
-
-  <%= f.label :director %>
-  <%= f.text_field :director %>
-
-  <%= f.label :duration %>
-  <%= f.text_field :duration %>
-
-  <%= f.label :main_image %>
-  <%= f.file_field :main_image %>
-
-  <div class="checkboxes">
-    <%= f.collection_check_boxes(:genre_ids, Genre.order(:name), :id, :name) %>
+  <div class="<%= form_field_wrapper_classes %>">
+    <%= f.label :title, class: label_classes %>
+    <%= f.text_field :title, autofocus: true, class: text_input_classes %>
   </div>
 
-  <%= f.submit %>
+  <div class="<%= form_field_wrapper_classes %>">
+    <%= f.label :description, class: label_classes %>
+    <%= f.text_area :description, rows: 10, class: textarea_classes %>
+  </div>
+
+  <div class="<%= form_field_wrapper_classes %>">
+    <%= f.label :rating, class: label_classes %>
+    <%= f.select :rating, Movie::RATINGS, { prompt: "Pick one" }, { class: select_classes } %>
+  </div>
+
+  <div class="<%= form_field_wrapper_classes %>">
+    <%= f.label :released_on, class: label_classes %>
+    <div> <!-- Wrapper for inline-block date selects -->
+      <%= f.date_select :released_on, {}, date_select_html_options %>
+    </div>
+  </div>
+
+  <div class="<%= form_field_wrapper_classes %>">
+    <%= f.label :total_gross, class: label_classes %>
+    <%= f.number_field :total_gross, class: text_input_classes %>
+  </div>
+
+  <div class="<%= form_field_wrapper_classes %>">
+    <%= f.label :director, class: label_classes %>
+    <%= f.text_field :director, class: text_input_classes %>
+  </div>
+
+  <div class="<%= form_field_wrapper_classes %>">
+    <%= f.label :duration, class: label_classes %>
+    <%= f.text_field :duration, class: text_input_classes %>
+  </div>
+
+  <div class="<%= form_field_wrapper_classes %>">
+    <%= f.label :main_image, class: label_classes %>
+    <%= f.file_field :main_image, class: file_input_classes %>
+  </div>
+
+  <div class="<%= checkbox_group_wrapper_classes %>">
+    <%= f.label :genre_ids, "Genres", class: label_classes %>
+    <%= f.collection_check_boxes :genre_ids, Genre.order(:name), :id, :name do |b| %>
+      <div class="<%= checkbox_item_wrapper_classes %>">
+        <%= b.check_box class: checkbox_input_classes %>
+        <%= b.label class: checkbox_label_classes %>
+      </div>
+    <% end %>
+  </div>
+
+  <%= f.submit class: submit_button_classes %>
 <% end %>
