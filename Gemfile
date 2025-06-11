@@ -41,7 +41,7 @@ gem 'kamal', '~> 2.5', '>= 2.5.3', require: false
 gem 'thruster', '~> 0.1.12', require: false
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
-gem 'aws-sdk-s3', '~> 1.88', '>= 1.88.1', require: false
+gem 'aws-sdk-s3', '~> 1.189', require: false
 gem 'image_processing', '~> 1.12', '>= 1.12.2'
 
 gem 'bootstrap', '~> 5.1', '>= 5.1.3'
