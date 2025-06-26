@@ -1,19 +1,31 @@
-<h1>Reviews for <%= link_to @movie.title, @movie %></h1>
+<h1 class="text-3xl font-bold my-8 text-center text-gray-900">
+  Reviews for <%= link_to @movie.title, @movie, class: "text-blue-600 hover:underline" %>
+</h1>
 
-<ul class="reviews">
+<div class="max-w-2xl mx-auto space-y-8">
   <% @reviews.each do |review| %>
-    <li>
-      <%= pluralize(review.stars, 'star') %>
-      <p>
-<%= profile_image(review.user, 35) %>
-        <%= link_to review.user.name, review.user %>
-        <span class="date">
-          <%= time_ago_in_words(review.created_at) %> ago
-        </span>
-      </p>
-      <p>
-        <%= review.comment %>
-      </p>
-    </li>
+    <article class="p-6 bg-white shadow-lg rounded-lg border border-gray-200">
+      <div class="flex items-start space-x-4">
+        <%= profile_image(review.user, class: "w-12 h-12 rounded-full", gravatar_size: 48) %>
+        <div class="flex-1">
+          <div class="flex items-center justify-between">
+            <div>
+              <span class="font-semibold text-lg text-blue-600 hover:underline">
+                <%= link_to review.user.name, review.user %>
+              </span>
+              <div class="text-yellow-500 text-md mt-1">
+                <%= pluralize(review.stars, 'star') %>
+              </div>
+            </div>
+            <span class="text-sm text-gray-500">
+              <%= time_ago_in_words(review.created_at) %> ago
+            </span>
+          </div>
+          <p class="mt-3 text-gray-700 leading-relaxed">
+            <%= review.comment %>
+          </p>
+        </div>
+      </div>
+    </article>
   <% end %>
-</ul>
+</div>

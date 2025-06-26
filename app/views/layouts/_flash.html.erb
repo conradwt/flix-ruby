@@ -1,4 +1,21 @@
 <% flash.each do |type, message| %>
-  <%= content_tag(:div, message, class: "flash #{type}") %>
+  <%
+    # Define base classes for all flash messages
+    # -mt-4 (negative margin top of 1rem) and mb-8 (margin bottom of 2rem)
+    # reflect the original custom.scss styling.
+    base_classes = "px-4 py-3 rounded-lg text-center -mt-4 mb-8 shadow-md"
+
+    # Determine specific classes based on the flash type
+    # The original custom.scss mapped 'notice' to Bootstrap's 'alert-success'
+    # and 'alert' (as a flash key) to Bootstrap's 'alert-danger'.
+    type_specific_classes = case type.to_s # Ensure type is a string for comparison
+                            when 'notice' # For success messages
+                              "bg-green-100 border border-green-300 text-green-700"
+                            when 'alert'  # For error or critical alert messages
+                              "bg-red-100 border border-red-300 text-red-700"
+                            else # Default styling for other flash types (e.g., :info)
+                              "bg-blue-100 border border-blue-300 text-blue-700"
+                            end
+  %>
+  <%= content_tag(:div, message, class: "#{base_classes} #{type_specific_classes}") %>
 <% end %>
- 

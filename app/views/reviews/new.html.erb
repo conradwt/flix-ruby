@@ -1,13 +1,28 @@
-<h1>New Review for <%= link_to @movie.title, @movie %></h1>
+<h1 class="text-3xl font-bold mb-4 text-center text-gray-900">
+  New Review for <%= link_to @movie.title, @movie, class: "text-blue-600 hover:underline" %>
+</h1>
 
-<%= form_with(model: [@movie, @review]) do |f| %>
+<% 
+  form_field_wrapper_classes = "mb-6"
+  label_classes = "block text-lg font-semibold text-gray-900 mb-1"
+  input_base_classes = "block w-full border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 sm:text-sm disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 disabled:shadow-none invalid:border-pink-500 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500"
+  select_classes = "#{input_base_classes} pl-3 pr-10 py-2 bg-white"
+  textarea_classes = "#{input_base_classes} px-3 py-2 bg-white"
+  submit_button_classes = "w-full flex justify-center py-3 px-4 border border-transparent rounded-md shadow-sm text-lg font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 mt-8"
+%>
+
+<%= form_with(model: [@movie, @review], class: "max-w-xl mx-auto mt-8") do |f| %>
   <%= render "shared/errors", object: @review %>
 
-  <%= f.label :stars %>
-  <%= f.select :stars, Review::STARS, prompt: "Pick one" %>
+  <div class="<%= form_field_wrapper_classes %>">
+    <%= f.label :stars, class: label_classes %>
+    <%= f.select :stars, Review::STARS, { prompt: "Pick one" }, { class: select_classes } %>
+  </div>
 
-  <%= f.label :comment %>
-  <%= f.text_area :comment, placeholder: "What did you think?" %>
+  <div class="<%= form_field_wrapper_classes %>">
+    <%= f.label :comment, class: label_classes %>
+    <%= f.text_area :comment, rows: 8, placeholder: "What did you think?", class: textarea_classes %>
+  </div>
 
-  <%= f.submit "Post Review" %>
+  <%= f.submit "Post Review", class: submit_button_classes %>
 <% end %>

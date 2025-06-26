@@ -19,11 +19,11 @@ module MoviesHelper
     end
   end
 
-  def main_image(movie)
+  def main_image(movie, options = {})
     if movie.main_image.attached?
-      image_tag movie.main_image
+      image_tag movie.main_image, options
     else
-      image_tag 'placeholder.png'
+      image_tag 'placeholder.png', options
     end
   end
 end

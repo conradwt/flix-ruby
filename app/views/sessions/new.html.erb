@@ -1,11 +1,48 @@
-<h1>Sign In</h1>
+<%
+  # Define common Tailwind CSS classes for form elements.
+  # These are inspired by the styles previously in custom.scss.
 
-<%= form_with(url: session_path) do |f| %>
-  <%= f.label :email %>
-  <%= f.email_field :email, autofocus: true %>
+  # Wrapper for the form area, centered with a max-width.
+  form_wrapper_classes = "max-w-lg mx-auto mt-8 px-4 sm:px-6 lg:px-8"
 
-  <%= f.label :password %>
-  <%= f.password_field :password %>
+  # Styling for the main title of the form.
+  title_classes = "text-3xl font-bold mb-8 text-center text-gray-900"
 
-  <%= f.submit "Sign In" %>
-<% end %>
+  # Styling for form labels.
+  # Corresponds to 'font-size: 1.1rem; font-weight: 600; display: block;' from custom.scss.
+  label_classes = "block text-lg font-semibold text-gray-900 mb-1"
+
+  # Styling for text input fields (email, password, text, etc.).
+  # Corresponds to '.form-control' from Bootstrap, with custom variables.
+  # Includes border color from theme, focus styling, and background.
+  input_classes = "block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 sm:text-sm bg-white"
+
+  # Styling for the primary submit button.
+  # Corresponds to '.btn .btn-primary' from Bootstrap.
+  # Full width, themed background, hover effect, and focus styling.
+  submit_button_classes = "w-full flex justify-center py-3 px-4 border border-transparent rounded-md shadow-sm text-lg font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+%>
+
+<div class="<%= form_wrapper_classes %>">
+  <h1 class="<%= title_classes %>">Sign In</h1>
+
+  <%= form_with(url: session_path, class: "space-y-6") do |f| %>
+    <div>
+      <%= f.label :email, class: label_classes %>
+      <div class="mt-1">
+        <%= f.email_field :email, autofocus: true, class: input_classes, placeholder: "your@email.com", required: true %>
+      </div>
+    </div>
+
+    <div>
+      <%= f.label :password, class: label_classes %>
+      <div class="mt-1">
+        <%= f.password_field :password, class: input_classes, placeholder: "Password", required: true %>
+      </div>
+    </div>
+
+    <div>
+      <%= f.submit "Sign In", class: submit_button_classes %>
+    </div>
+  <% end %>
+</div>
