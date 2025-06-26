@@ -38,7 +38,7 @@ gem 'dartsass-rails', '~> 0.5.0'
 gem "tailwindcss-rails", "~> 4.2.3"
 
 # Deploy this application anywhere as a Docker container [https://kamal-deploy.org]
-gem 'kamal', '~> 2.5', '>= 2.5.3', require: false
+gem 'kamal', '~> 2.7', require: false
 
 # Add HTTP asset caching/compression and X-Sendfile acceleration to Puma [https://github.com/basecamp/thruster/]
 gem 'thruster', '~> 0.1.12', require: false
