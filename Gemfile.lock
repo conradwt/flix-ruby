@@ -455,7 +455,7 @@ DEPENDENCIES
   rexml (~> 3.4, >= 3.4.1)
   rspec-rails (~> 8.0)
   rubocop-rails-omakase (~> 1.1)
-  selenium-webdriver (~> 4.31)
+  selenium-webdriver (~> 4.33)
   solid_cable (~> 3.0, >= 3.0.7)
   solid_cache (~> 1.0, >= 1.0.7)
   solid_queue (~> 1.1, >= 1.1.4)
