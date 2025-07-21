@@ -52,7 +52,7 @@ group :development, :test do
   gem 'debug', '~> 1.10', platforms: %i[ mri windows ], require: "debug/prelude"
 
   # Static analysis for security vulnerabilities [https://brakemanscanner.org/]
-  gem 'brakeman', '~> 7.0', '>= 7.0.2', require: false
+  gem 'brakeman', '~> 7.1', require: false
   
   gem 'factory_bot_rails', '~> 6.4', '>= 6.4.4'
 
