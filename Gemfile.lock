@@ -234,10 +234,10 @@ GEM
     parser (3.3.9.0)
       ast (~> 2.4.1)
       racc
-    pg (1.6.0-aarch64-linux)
-    pg (1.6.0-arm64-darwin)
-    pg (1.6.0-x86_64-darwin)
-    pg (1.6.0-x86_64-linux)
+    pg (1.6.1-aarch64-linux)
+    pg (1.6.1-arm64-darwin)
+    pg (1.6.1-x86_64-darwin)
+    pg (1.6.1-x86_64-linux)
     pp (0.6.2)
       prettyprint
     prettyprint (0.2.0)
@@ -450,7 +450,7 @@ DEPENDENCIES
   importmap-rails (~> 2.0, >= 2.0.1)
   jbuilder (~> 2.13)
   kamal (~> 2.5, >= 2.5.3)
-  pg (~> 1.5, >= 1.5.3)
+  pg (~> 1.6)
   propshaft (~> 1.1)
   puma (~> 6.6.0)
   rails (~> 8.0.2)
