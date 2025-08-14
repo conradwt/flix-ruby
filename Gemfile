@@ -1,7 +1,7 @@
 source "https://rubygems.org"
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
-gem "rails", "~> 8.0.2"
+gem 'rails', '~> 8.0', '>= 8.0.2.1'
 # The modern asset pipeline for Rails [https://github.com/rails/propshaft]
 gem 'propshaft', '~> 1.1'
 # Use postgresql as the database for Active Record
@@ -53,7 +53,7 @@ group :development, :test do
 
   # Static analysis for security vulnerabilities [https://brakemanscanner.org/]
   gem 'brakeman', '~> 7.0', '>= 7.0.2', require: false
-  
+
   gem 'factory_bot_rails', '~> 6.4', '>= 6.4.4'
 
   gem 'rexml', '~> 3.4', '>= 3.4.1'
