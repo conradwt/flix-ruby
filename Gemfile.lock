@@ -455,7 +455,7 @@ DEPENDENCIES
   propshaft (~> 1.1)
   puma (~> 6.6.0)
   rails (~> 8.0, >= 8.0.2.1)
-  rexml (~> 3.4, >= 3.4.1)
+  rexml (~> 3.4)
   rspec-rails (~> 8.0)
   rubocop-rails-omakase (~> 1.1)
   selenium-webdriver (~> 4.34)
