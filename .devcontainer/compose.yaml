@@ -21,7 +21,7 @@ services:
       - postgres
 
   postgres:
-    image: postgres:17.5
+    image: postgres:17.6
     restart: unless-stopped
     networks:
       - default
