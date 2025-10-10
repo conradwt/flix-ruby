@@ -24,7 +24,7 @@ gem 'bcrypt', '~> 3.1', '>= 3.1.20'
 gem 'tzinfo-data', '~> 1.2025', '>= 1.2025.2', platforms: %i[windows jruby]
 
 # Use the database-backed adapters for Rails.cache, Active Job, and Action Cable
-gem 'solid_cache', '~> 1.0', '>= 1.0.7'
+gem 'solid_cache', '~> 1.0'
 gem 'solid_queue', '~> 1.1', '>= 1.1.4'
 gem 'solid_cable', '~> 3.0', '>= 3.0.7'
 
