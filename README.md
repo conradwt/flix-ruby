@@ -8,9 +8,9 @@ The purpose of this project is to implement an application where fans can commen
 
 - ImageMagick 6.9.13 or newer
 
-- PostgreSQL 17.6 or newer
+- PostgreSQL 18.0 or newer
 
-- Rails 8.0.3 or newer
+- Rails 8.1.0 or newer
 
 - Ruby 3.4.7 or newer
 
