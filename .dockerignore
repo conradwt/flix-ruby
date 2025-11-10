@@ -49,3 +49,15 @@
 # Ignore Docker-related files
 /.dockerignore
 /Dockerfile*
+
+# Ignore documentation.
+README.md
+
+# Ignore macOS artifacts.
+**/.DS_Store
+
+# Ignore VSCode artifacts.
+**/.metals
+
+# Ignore Traefik files.
+traefik*
