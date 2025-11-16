@@ -35,7 +35,7 @@ gem "bootsnap", "~> 1.18", ">= 1.18.4", require: false
 gem "dartsass-rails", "~> 0.5.0"
 
 # Use Tailwind CSS
-gem "tailwindcss-rails", "~> 4.3.0"
+gem "tailwindcss-rails", "~> 4.4.0"
 
 # Deploy this application anywhere as a Docker container [https://kamal-deploy.org]
 gem "kamal", "~> 2.5", ">= 2.5.3", require: false
