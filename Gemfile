@@ -47,6 +47,8 @@ gem "thruster", "~> 0.1.12", require: false
 gem "aws-sdk-s3", "~> 1.88", ">= 1.88.1", require: false
 gem "image_processing", "~> 1.12", ">= 1.12.2"
 
+gem 'google-protobuf', '~> 4.33', '>= 4.33.2'
+
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", "~> 1.10", platforms: %i[ mri windows ], require: "debug/prelude"
