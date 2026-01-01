@@ -18,7 +18,7 @@ gem "stimulus-rails", "~> 1.3", ">= 1.3.4"
 gem "jbuilder", "~> 2.13"
 
 # Use Active Model has_secure_password [https://guides.rubyonrails.org/active_model_basics.html#securepassword]
-gem "bcrypt", "~> 3.1", ">= 3.1.20"
+gem "bcrypt", "~> 3.1"
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem "tzinfo-data", "~> 1.2025", ">= 1.2025.2", platforms: %i[windows jruby]
