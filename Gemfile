@@ -9,7 +9,7 @@ gem "pg", "~> 1.5", ">= 1.5.3"
 # Use the Puma web server [https://github.com/puma/puma]
 gem "puma", "~> 6.6.0"
 # Use JavaScript with ESM import maps [https://github.com/rails/importmap-rails]
-gem "importmap-rails", "~> 2.0", ">= 2.0.1"
+gem "importmap-rails", "~> 2.2"
 # Hotwire's SPA-like page accelerator [https://turbo.hotwired.dev]
 gem "turbo-rails", "~> 2.0", ">= 2.0.13"
 # Hotwire's modest JavaScript framework [https://stimulus.hotwired.dev]
