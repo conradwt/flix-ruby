@@ -481,4 +481,4 @@ DEPENDENCIES
   web-console (~> 4.2, >= 4.2.1)
 
 BUNDLED WITH
-  4.0.2
+  4.0.3
