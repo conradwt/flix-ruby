@@ -2,5 +2,6 @@
   "files.watcherExclude": {
     "**/target": true
   },
-  "zowe.settings.version": 2
+  "zowe.settings.version": 2,
+  "snyk.advanced.autoSelectOrganization": true
 }
