@@ -14,7 +14,7 @@ The purpose of this project is to implement an application where fans can commen
 
 - Ruby 4.0.4 or newer
 
-Note: This tutorial was updated on macOS 26.4.1 (Tahoe).
+Note: This tutorial was updated on macOS 26.5.2 (Tahoe).
 
 ## Communication
 
