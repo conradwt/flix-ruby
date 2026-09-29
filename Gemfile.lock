@@ -92,7 +92,7 @@ GEM
     aws-sdk-kms (1.132.0)
       aws-sdk-core (~> 3, >= 3.256.0)
       aws-sigv4 (~> 1.5)
-    aws-sdk-s3 (1.232.2)
+    aws-sdk-s3 (1.232.3)
       aws-sdk-core (~> 3, >= 3.256.0)
       aws-sdk-kms (~> 1)
       aws-sigv4 (~> 1.5)
@@ -302,12 +302,12 @@ GEM
       logger
       prism (>= 1.6.0)
       tsort
-    rdoc (8.0.0)
+    rdoc (8.1.0)
       erb
       prism (>= 1.6.0)
       rbs (>= 4.0.0)
       tsort
-    regexp_parser (2.13.0)
+    regexp_parser (2.13.1)
     reline (0.7.0)
       io-console (~> 0.5)
     rexml (3.4.4)
@@ -465,7 +465,7 @@ DEPENDENCIES
   pg (~> 1.5, >= 1.5.3)
   propshaft (~> 1.1)
   puma (~> 6.6.0)
-  rails (~> 8.1, >= 8.1.1)
+  rails (~> 8.1, >= 8.1.4)
   rexml (~> 3.4, >= 3.4.1)
   rspec-rails (~> 8.0)
   rubocop-rails-omakase (~> 1.1)
